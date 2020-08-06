@@ -7,8 +7,7 @@ alert( `Введенная вами температура равняется ${
 
 //ЗАДАНИЕ 2
 
-let name = "Василий";
-let admin = name;
+let name = "Василий", admin = name;
 
 console.log(admin);
 
