@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function Post(author,text,date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        Post.prototype.edit = function(){
+            this.text = prompt('Введите текст');
+        }
+
+        const Post1 = new Post('author','text','date');
+        Post1.edit();
+
+        console.log(Post1);
+
+        function AttachedPost (author, text, date){
+            Post.call(this, author, text, date);
+            this.highlighted = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.consttructor = AttachedPost;
+
+        AttachedPost.prototype.makeTextHighlighted = function(){
+            this.highlighted = true;
+        }
+
+
+        const AttachedPost1 = new AttachedPost('author','text','date');
+        AttachedPost1.makeTextHighlighted();
+        AttachedPost1.edit();
+    </script>
+</body>
+</html>

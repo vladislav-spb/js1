@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        class Post{
+            constructor(author, text, date){
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            }
+
+            edit(){
+                this.text = prompt('Введите текст для объекта');
+            }
+        }
+
+
+        const Post1 = new Post('author','text','date');
+        Post1.edit();
+
+        console.log(Post1);
+
+        class AttachedPost extends Post {
+            constructor(author,text,date){
+                super(author,text,date);
+                this.highlighted = false;
+            }
+
+            makeTextHighlighted(){
+                this.highlighted = true;
+            }
+        }
+
+        const AttachedPost1 = new AttachedPost('author','text','date');
+        AttachedPost1.makeTextHighlighted();
+        AttachedPost1.edit();
+
+        console .log(AttachedPost1);
+
+    </script>
+</body>
+</html>
