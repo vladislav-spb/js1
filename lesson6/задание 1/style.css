@@ -1,0 +1,28 @@
+.container{
+    width: 1470px;
+    padding: 10px;
+    box-shadow: 0 0 20px black;
+    margin: 10px;
+}
+
+.wrap{
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    color: rgb(255, 0, 0);
+    margin: 15px auto;
+}
+
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+img{
+    width: 465px;
+    height: 290px;
+    box-shadow: 0 0 10px rgb(93, 93, 255);
+    margin: 10px;
+}

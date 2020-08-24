@@ -1,0 +1,8 @@
+.bucketPanel {
+    width: 400px;
+    padding: 10px;
+}
+
+.productRemoveBtn:hover {
+    cursor: pointer;
+}

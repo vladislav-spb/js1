@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-light bg-dark">
+            <div class="btn-group ml-auto">
+                <button class="btn btn-light btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Корзина
+                </button>
+                <div class="dropdown-menu dropdown-menu-right basketPanel">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Имя</th>
+                                <th scope="col">Цена</th>
+                                <th scope="col">Количество</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2" scope="row">Итого:</th>
+                                <td colspan="3">
+                                    <span class="total">0</span>
+                                    <i class="fas fa-ruble-sign"></i>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </nav>
+
+        <br>
+
+        <div class="row">
+            <div class="col-4">
+                <div>Товар 1</div>
+                <img src="https://placeimg.com/640/480/nature" alt="..." class="img-thumbnail">
+                <div>
+                    <span class="productPrice">120</span>
+                    <i class="fas fa-ruble-sign"></i>
+                </div>
+                <button type="button" 
+                        class="btn btn-success mt-3 toBasketBtn"
+                        data-id="1"
+                        data-price="120"
+                        data-name="Товар 1"
+                        >
+                    В корзину
+                </button>
+            </div>
+            <div class="col-4">
+                <div>Товар 2</div>
+                <img src="https://placeimg.com/640/480/arch" alt="..." class="img-thumbnail">
+                <div>
+                    <span class="productPrice">75</span>
+                    <i class="fas fa-ruble-sign"></i>
+                </div>
+                <button type="button" 
+                        class="btn btn-success mt-3 toBasketBtn"
+                        data-id="2"
+                        data-price="75"
+                        data-name="Товар 2"
+                        >
+                    В корзину
+                </button>
+            </div>
+            <div class="col-4">
+                <div>Товар 3</div>
+                <img src="https://placeimg.com/640/480/tech" alt="..." class="img-thumbnail">
+                <div>
+                    <span class="productPrice">3000</span>
+                    <i class="fas fa-ruble-sign"></i>
+                </div>
+                <button type="button" 
+                        class="btn btn-success mt-3 toBasketBtn"
+                        data-id="3"
+                        data-price="3000"
+                        data-name="Товар 3"
+                        >
+                    В корзину
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="scripts/appp.js"></script>
+</body>
+
+</html>
