@@ -5,7 +5,7 @@ const products = [
     {id: 4, title: 'Gamepad', price: 4500, images: 'http://cdn.shopify.com/s/files/1/0277/3113/2555/collections/df86aec894828bdc7117abc37d187712_1200x1200.png?v=1586398240'},
 ];
 
-const renderProduct = (images, title, price) => {
+const renderProduct = (images = 'https://forsarm.ru/image/cache/placeholder-200x200.png', title, price) => {
     return `<div class="product-item">
                 <img class="product-img" src="${images}" alt="${title}">
                 <h3>${title}</h3>
@@ -16,7 +16,7 @@ const renderProduct = (images, title, price) => {
 
 const renderProducts = (list) => {
     const productList = list.map(product => renderProduct(product.images,product.title, product.price));
-    document.querySelector('.products').innerHTML = productList.join('');
+    document.querySelector('.products').insertAdjacentHTML("beforeend", productList.join('')) ;
 };
 
 renderProducts(products);
